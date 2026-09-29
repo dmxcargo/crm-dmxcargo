@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:?Set the stage API URL, including /api/v1}
+    expose:
+      - "80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

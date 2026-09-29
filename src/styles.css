@@ -1,0 +1,1541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/* ── 1. Global Poppins Font Setting ─────────────────────────── */
+:root,
+[data-bs-theme=light],
+[data-bs-theme=dark] {
+  --bs-body-font-family: 'Poppins', sans-serif !important;
+  --bs-font-sans-serif: 'Poppins', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+html,
+body,
+#root {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+*,
+*::before,
+*::after {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #1e293b;
+  background: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn,
+.nav-link,
+.dropdown-menu,
+.modal,
+.modal *,
+.table,
+.table *,
+.table-clean,
+.table-clean *,
+.card,
+.card *,
+.form-control,
+.form-select,
+.badge,
+.chip-f,
+p,
+span,
+a,
+label,
+table,
+thead,
+tbody,
+th,
+td,
+tr,
+li,
+ul,
+div,
+b,
+strong,
+em,
+small,
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* ── 2. Tabular Numbers for Currency & Quantities ───────────── */
+.tabular,
+.vl,
+.num,
+td.right,
+.amt,
+[style*="tabular-nums"] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 3. Reference-Style Rounded Pill Status Badges ──────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  border-radius: 50rem !important;
+  /* Clean Pill shape like reference */
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.b-green {
+  background: #dcfce7 !important;
+  color: #16a34a !important;
+}
+
+.b-red {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+.b-amber {
+  background: #fef3c7 !important;
+  color: #d97706 !important;
+}
+
+.b-blue {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
+}
+
+.b-gray {
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+}
+
+.b-purple {
+  background: #ede9fe !important;
+  color: #7c3aed !important;
+}
+
+.b-cyan {
+  background: #cffafe !important;
+  color: #0891b2 !important;
+}
+
+.b-orange {
+  background: #ffedd5 !important;
+  color: #ea580c !important;
+}
+
+.b-pink {
+  background: #fce7f3 !important;
+  color: #db2777 !important;
+}
+
+/* ── 4. Reference-Style Clean Data Table ─────────────────────── */
+.table-card {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  overflow: hidden;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.table-responsive {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  display: block !important;
+}
+
+.table-clean {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  border-collapse: collapse !important;
+}
+
+.table-clean thead th {
+  background: #f8fafc !important;
+  color: #64748b !important;
+  font-size: 11.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.25px;
+  padding: 10px 10px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  border-top: none !important;
+  white-space: nowrap;
+  vertical-align: middle !important;
+}
+
+.table-clean tbody td {
+  padding: 10px 10px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  vertical-align: middle !important;
+  color: #334155;
+  font-size: 12.5px;
+  background: #ffffff;
+}
+
+@media (max-width: 1366px) {
+
+  .table-clean thead th,
+  .table-clean tbody td {
+    padding: 8px 8px !important;
+    font-size: 12px;
+  }
+}
+
+.table-clean tbody tr {
+  transition: background-color 0.12s ease;
+}
+
+.table-clean tbody tr:hover td {
+  background-color: #f8fafc !important;
+}
+
+.table-clean tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+/* Primary Link in Table (Blue ID / Name like reference) */
+.tbl-link {
+  color: #0284c7;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+
+.tbl-link:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+
+/* Action View Icon Button */
+.tbl-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tbl-icon-btn:hover {
+  background: #f1f5f9;
+  color: #0284c7;
+}
+
+.tbl-icon-btn .bi {
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* Rounded Checkbox */
+.table-clean .form-check-input {
+  width: 17px;
+  height: 17px;
+  border-radius: 4px;
+  border: 1.5px solid #cbd5e1;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* ── 5. Clean Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ── 6. Modal Backdrop ───────────────────────────────────────── */
+.modal-backdrop.show {
+  opacity: 0.45;
+}
+
+/* ── 7. Detail Page Master Summary Card (Reference Style) ────── */
+.detail-summary-card {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  margin-bottom: 24px;
+}
+
+.detail-info-row {
+  display: flex;
+  align-items: baseline;
+  font-size: 13px;
+  margin-bottom: 9px;
+}
+
+.detail-info-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-info-label {
+  color: #64748b;
+  width: 145px;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.detail-info-val {
+  color: #0f172a;
+  font-weight: 600;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .border-end-md {
+    border-right: 1px solid #eef2f6 !important;
+  }
+}
+
+/* ── 8. Deals Pipeline (Exact Match to Photo 3 & 4) ──────────── */
+.deals-board {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 14px !important;
+  overflow-x: auto !important;
+  padding-bottom: 24px !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.deals-col {
+  width: 295px !important;
+  min-width: 295px !important;
+  max-width: 295px !important;
+  background: #f4f5f7 !important;
+  border-radius: 12px !important;
+  padding: 12px 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+.deals-col.won {
+  background: #edf7ed !important;
+}
+
+.deals-col-header {
+  padding: 2px 6px 6px 6px !important;
+}
+
+.deals-col-title {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  color: #5e6c84 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.deals-col-value {
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  color: #172b4d !important;
+  margin-top: 3px !important;
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 6px !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+.deals-col-count {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+  color: #6b778c !important;
+}
+
+/* Card */
+.deals-card {
+  background: #ffffff !important;
+  border-radius: 10px !important;
+  padding: 12px 14px !important;
+  border: 1px solid rgba(9, 30, 66, 0.08) !important;
+  box-shadow: 0 1px 2px rgba(9, 30, 66, 0.05) !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.deals-card:hover {
+  box-shadow: 0 4px 12px rgba(9, 30, 66, 0.12) !important;
+  border-color: #b3d4ff !important;
+  transform: translateY(-2px) !important;
+}
+
+.deals-card-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+}
+
+.deals-card-title {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #172b4d !important;
+  line-height: 1.3 !important;
+  margin: 0 !important;
+}
+
+.deals-card-sub {
+  font-size: 11.5px !important;
+  color: #6b778c !important;
+  line-height: 1.3 !important;
+}
+
+.deals-card-tag {
+  width: 28px !important;
+  height: 3.5px !important;
+  border-radius: 2px !important;
+  margin-top: 2px !important;
+}
+
+.deals-card-middle {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 4px !important;
+}
+
+.deals-card-user {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 12px !important;
+  color: #172b4d !important;
+  font-weight: 500 !important;
+}
+
+.deals-user-avatar {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  flex-shrink: 0 !important;
+}
+
+.deals-card-price {
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  color: #172b4d !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+.deals-card-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 6px !important;
+  border-top: 1px solid #f4f5f7 !important;
+  margin-top: 2px !important;
+  font-size: 11px !important;
+  color: #6b778c !important;
+}
+
+/* Deals Toolbar & Controls */
+.deals-toolbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid #ebedf0 !important;
+}
+
+.deals-tabs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+
+.deals-tab-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 4px 0 12px 0 !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #6b778c !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: color 0.15s ease !important;
+}
+
+.deals-tab-btn:hover {
+  color: #172b4d !important;
+}
+
+.deals-tab-btn.active {
+  color: #16a34a !important;
+}
+
+.deals-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: #16a34a;
+  border-radius: 2px 2px 0 0;
+}
+
+.deals-toolbar-sep {
+  height: 18px !important;
+  width: 1px !important;
+  background: #dfe1e6 !important;
+  margin: 0 4px !important;
+}
+
+.deals-toolbar-metrics {
+  font-size: 13px !important;
+  color: #5e6c84 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.deals-toolbar-metrics b {
+  color: #172b4d !important;
+  font-weight: 700 !important;
+}
+
+.btn-deals-add {
+  background: #22c55e !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  border: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  font-size: 13px !important;
+  box-shadow: 0 1px 2px rgba(34, 197, 94, 0.2) !important;
+  transition: background 0.15s ease !important;
+  text-decoration: none !important;
+}
+
+.btn-deals-add:hover {
+  background: #16a34a !important;
+  color: #ffffff !important;
+}
+
+.btn-deals-export {
+  background: #ffffff !important;
+  border: 1px solid #dfe1e6 !important;
+  border-radius: 8px !important;
+  color: #172b4d !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  transition: all 0.15s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+.btn-deals-export:hover {
+  background: #f4f5f7 !important;
+  border-color: #c1c7d0 !important;
+  color: #172b4d !important;
+}
+
+/* ── 9. Modern Web CRM Filtering UI ────────────────────────── */
+.filter-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+
+.filter-stage-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 14px;
+  scrollbar-width: thin;
+}
+
+.filter-stage-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50rem;
+  font-size: 12.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.filter-stage-pill:hover {
+  background: #f8fafc;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+.filter-stage-pill.active {
+  background: #eff6ff;
+  color: #0284c7;
+  border-color: #38bdf8;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(2, 132, 199, 0.1);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.filter-chip-remove {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2px;
+  transition: color 0.12s;
+}
+
+.filter-chip-remove:hover {
+  color: #ef4444;
+}
+
+.filter-adv-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+/* ── 10. Customer & Detail Page Modern Layout (Reference Style) ── */
+.detail-nav-pills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 18px;
+}
+
+.detail-nav-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 22px;
+  border-radius: 50rem;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.detail-nav-pill-btn:hover {
+  background: #f8fafc;
+  color: #1e293b;
+  border-color: #cbd5e1;
+}
+
+.detail-nav-pill-btn.active {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+
+.detail-stat-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.segmented-dark-tabs {
+  display: inline-flex;
+  align-items: center;
+  background: #334155;
+  border-radius: 50rem;
+  padding: 3px;
+}
+
+.segmented-dark-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 50rem;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  white-space: nowrap;
+}
+
+.segmented-dark-btn:hover {
+  color: #ffffff;
+}
+
+.segmented-dark-btn.active {
+  background: #1e293b;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-green-action {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 7px 15px !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  box-shadow: 0 1px 2px rgba(22, 163, 74, 0.2) !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease !important;
+}
+
+.btn-green-action:hover {
+  background: #15803d !important;
+  color: #ffffff !important;
+}
+
+.btn-orange-action {
+  background: #f59e0b !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 4px 12px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  cursor: pointer !important;
+  transition: opacity 0.15s ease !important;
+  text-decoration: none !important;
+}
+
+.btn-orange-action:hover {
+  opacity: 0.9 !important;
+  color: #ffffff !important;
+}
+
+/* ── 11. Modern Timeline & Activity Feed ── */
+.modern-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  padding-left: 46px;
+}
+
+.modern-timeline::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 17px;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.modern-tl-item {
+  position: relative;
+}
+
+.modern-tl-node {
+  position: absolute;
+  left: -46px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.07);
+  z-index: 2;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.modern-tl-node:hover {
+  transform: scale(1.08);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.1);
+}
+
+.modern-tl-node.act-CALL {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #2563eb;
+}
+
+.modern-tl-node.act-WHATSAPP {
+  background: #ecfdf5;
+  border-color: #86efac;
+  color: #059669;
+}
+
+.modern-tl-node.act-VISIT {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #d97706;
+}
+
+.modern-tl-node.act-EMAIL {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+  color: #7c3aed;
+}
+
+.modern-tl-node.act-MEETING {
+  background: #ecfeff;
+  border-color: #a5f3fc;
+  color: #0891b2;
+}
+
+.modern-tl-node.act-NOTE {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.modern-tl-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.15s ease;
+}
+
+.modern-tl-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ── Status Pills (Anti-Slop Modern Badges) ── */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3.5px 9.5px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.status-pill svg {
+  flex-shrink: 0;
+}
+
+.status-pill-success {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+}
+
+.status-pill-danger {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #b91c1c;
+}
+
+.status-pill-info {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+}
+
+.status-pill-warning {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #b45309;
+}
+
+.status-pill-muted {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+/* ── 12. Modern Stage Transition Cards ── */
+.modern-stage-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  transition: all 0.15s ease;
+}
+
+.modern-stage-card:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+}
+
+.modern-stage-icon-node {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── 13. Connected Route Cards (User Reference Style) ── */
+.act-session-group {
+  margin-bottom: 24px;
+}
+
+.act-session-date-header {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0d9488;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.act-route-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  transition: all 0.15s ease;
+}
+
+.act-route-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.act-route-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.act-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3.5px 12px;
+  border-radius: 50rem;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+.act-pill-CALL {
+  background: #0284c7;
+}
+
+.act-pill-WHATSAPP {
+  background: #059669;
+}
+
+.act-pill-VISIT {
+  background: #d97706;
+}
+
+.act-pill-EMAIL {
+  background: #7c3aed;
+}
+
+.act-pill-MEETING {
+  background: #0891b2;
+}
+
+.act-pill-NOTE {
+  background: #475569;
+}
+
+.act-quick-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.act-quick-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.act-quick-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.act-quick-btn.btn-call:hover {
+  color: #16a34a;
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.act-quick-btn.btn-wa:hover {
+  color: #059669;
+  border-color: #a7f3d0;
+  background: #ecfdf5;
+}
+
+.act-quick-btn.btn-map:hover {
+  color: #0284c7;
+  border-color: #bae6fd;
+  background: #f0f9ff;
+}
+
+.act-steps-container {
+  position: relative;
+}
+
+.act-step-row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.act-step-node-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 22px;
+}
+
+.act-step-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.act-circle-success {
+  background: #16a34a;
+}
+
+.act-circle-danger {
+  background: #dc2626;
+}
+
+.act-circle-info {
+  background: #0284c7;
+}
+
+.act-circle-warning {
+  background: #d97706;
+}
+
+.act-step-dotted-line {
+  width: 0;
+  flex-grow: 1;
+  min-height: 38px;
+  border-left: 2px dotted #16a34a;
+  margin: 4px 0;
+}
+
+.act-step-dotted-line.line-danger {
+  border-left-color: #dc2626;
+}
+
+.act-step-dotted-line.line-info {
+  border-left-color: #0284c7;
+}
+
+.act-step-content-col {
+  flex-grow: 1;
+  padding-bottom: 4px;
+}
+
+.act-step-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.act-step-time {
+  font-size: 13.5px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.act-step-time.time-success {
+  color: #0284c7;
+}
+
+.act-step-time.time-danger {
+  color: #dc2626;
+}
+
+.act-step-time.time-info {
+  color: #0284c7;
+}
+
+.act-step-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.act-step-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.act-step-divider {
+  border-bottom: 1px solid #f1f5f9;
+  margin: 10px 0 12px 36px;
+}
+
+.act-item-divider {
+  border-bottom: 1px dashed #e2e8f0;
+  margin: 14px 0 16px 36px;
+}
+
+/* ── Quick Filter Bar for Activities ── */
+.act-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding: 6px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.act-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.act-filter-btn:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.act-filter-btn.active {
+  background: #ffffff;
+  color: #0284c7;
+  border-color: #cbd5e1;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.act-filter-count {
+  font-size: 10.5px;
+  padding: 1.5px 6px;
+  border-radius: 10px;
+  background: #e2e8f0;
+  color: #475569;
+  font-weight: 600;
+}
+
+.act-filter-btn.active .act-filter-count {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+/* ── 14. Quick Access Tiles (Dashboard) ─────────────────────── */
+.qa-grid-card {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+
+.qa-tile {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  padding: 16px 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02) !important;
+  width: 100% !important;
+}
+
+.qa-tile:hover {
+  background: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06) !important;
+  transform: translateY(-2px) !important;
+}
+
+.qa-ic {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.qa-tile:hover .qa-ic {
+  transform: scale(1.06);
+}
+
+.qa-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* ── 15. Toast Notifikasi (otomatis hilang 5 detik, klik untuk tutup) ── */
+.toasts {
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 16px !important;
+  z-index: 2000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  max-width: min(360px, calc(100vw - 32px)) !important;
+  pointer-events: none !important;
+}
+
+.toasts .toast {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  border: 1px solid !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  animation: toast-in 0.18s ease !important;
+}
+
+.toasts .toast svg {
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+
+.toasts .toast.ok {
+  background: #f0fdf4 !important;
+  border-color: #bbf7d0 !important;
+  color: #15803d !important;
+}
+
+.toasts .toast.err {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #b91c1c !important;
+}
+
+.toasts .toast.warn {
+  background: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #b45309 !important;
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ── 16. Responsive Improvements ─────────────────────────────── */
+
+/* Filter bar: ensure form controls never overflow on small screens */
+.filter-card .form-select,
+.filter-card .form-control {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Filter selects: restrict width on small screens */
+@media (max-width: 576px) {
+  .filter-card .form-select,
+  .filter-card .form-control {
+    width: 100% !important;
+    flex: 1 1 auto;
+  }
+
+  /* Filter stage pill tabs scroll horizontally */
+  .filter-stage-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  /* Detail nav pills scroll horizontally */
+  .detail-nav-pills {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Deal board columns scroll */
+  .deals-board {
+    gap: 10px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .deals-col {
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
+  }
+
+  /* Deals toolbar wrap */
+  .deals-toolbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* Tablet: medium breakpoint improvements */
+@media (max-width: 768px) {
+  /* Summary card info rows: stack label + value */
+  .detail-info-label {
+    width: 120px;
+  }
+
+  /* Page header: stack title and actions on small screens */
+  /* PageHeader already uses flex-wrap, but ensure the gap is comfortable */
+  .detail-stat-banner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Filter row adjustments */
+  .filter-card {
+    padding: 12px 12px;
+  }
+
+  /* Stage tabs smaller padding on mobile */
+  .filter-stage-pill {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  /* Table card header actions wrap */
+  .table-card .d-flex.justify-content-between {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Pager: compact on mobile */
+  .pager-wrap {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+}
+
+/* ── btn-deals-add and btn-deals-export: mobile responsive ──── */
+@media (max-width: 480px) {
+  .btn-deals-add,
+  .btn-deals-export {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ── Detail header actions: ensure buttons wrap on mobile ───── */
+@media (max-width: 640px) {
+  .detail-header-actions {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
+/* ── Ensure form-select and form-control have consistent height ── */
+.form-select,
+.form-control {
+  min-height: 36px;
+}
+
+/* ── Consistent focus ring for all interactive elements ──────── */
+.btn:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible,
+.filter-stage-pill:focus-visible,
+.detail-nav-pill-btn:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+/* ── Fix: prevent table overflow inside card ─────────────────── */
+.table-card {
+  overflow-x: hidden;
+}
+
+.table-card .table-responsive {
+  border-radius: 0;
+}

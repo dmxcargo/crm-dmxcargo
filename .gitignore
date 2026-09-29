@@ -1,0 +1,15 @@
+# deps — install ulang via `npm ci` (jangan commit, merusak permission di Linux)
+node_modules/
+
+# build output — Vercel/CI build ulang sendiri
+dist/
+
+# env lokal (contoh: .env.example)
+.env*
+!.env.example
+
+# log & cache
+*.log
+devserver.log
+.vite/
+node_modules/.vite/

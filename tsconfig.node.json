@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [{ "path": "./tsconfig.json" }],
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts"]
+}
